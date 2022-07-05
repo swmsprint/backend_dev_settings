@@ -1,8 +1,9 @@
 package sprint.test.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+import sprint.test.domain.Info;
+import sprint.test.domain.InfoForm;
 
 @Controller
 public class HelloController {
@@ -10,9 +11,10 @@ public class HelloController {
      *
      * welcome반환
      */
-    @GetMapping("api/hello")
+    @GetMapping("/http/get")
     @ResponseBody
     public String apiWelcome(){
-        return "HelloWorld";
+        return "hello world!";
     }
+
 }
