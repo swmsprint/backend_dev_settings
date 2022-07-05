@@ -1,1 +1,1 @@
-# backend_dev_settings
+# server_dev_settings
