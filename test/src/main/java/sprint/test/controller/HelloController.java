@@ -13,6 +13,6 @@ public class HelloController {
     @GetMapping("api/hello")
     @ResponseBody
     public String apiWelcome(){
-        return "HelloWorld";
+        return "Hello World";
     }
 }
