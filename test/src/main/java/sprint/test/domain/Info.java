@@ -1,6 +1,7 @@
 package sprint.test.domain;
 
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,7 +14,14 @@ import javax.persistence.Id;
 public class Info {
     @Id @GeneratedValue
     private Long id;
+    private String content;
 
-    private String name;
+    @Builder
+    public Info(Long id, String content){
+        this.id = id;
+        this.content = content;
+    }
 
+    public Info() {
+    }
 }

@@ -22,13 +22,13 @@ public class InfoRepositoryTest {
     @Transactional
     public void testInfo() throws Exception{
         Info info = new Info();
-        info.setName("hello world");
+        info.setContent("hello world");
 
         Long saveId = infoRepository.save(info);
         Info findInfo = infoRepository.find(saveId);
 
         Assertions.assertThat(findInfo.getId()).isEqualTo(info.getId());
-        Assertions.assertThat(findInfo.getName()).isEqualTo(info.getName());
+        Assertions.assertThat(findInfo.getContent()).isEqualTo(info.getContent());
 
     }
 }
